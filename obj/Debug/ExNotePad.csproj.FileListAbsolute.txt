@@ -1,0 +1,16 @@
+C:\Users\Administrator\source\repos\ExNotePad\ExNotePad\obj\Debug\ExNotePad.csprojAssemblyReference.cache
+C:\Users\Administrator\source\repos\ExNotePad\ExNotePad\obj\Debug\ExNotePad.Properties.Resources.resources
+C:\Users\Administrator\source\repos\ExNotePad\ExNotePad\obj\Debug\ExNotePad.csproj.GenerateResource.cache
+C:\Users\Administrator\source\repos\ExNotePad\ExNotePad\obj\Debug\ExNotePad.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\ExNotePad\ExNotePad\bin\Debug\ExNotePad.exe.config
+C:\Users\Administrator\source\repos\ExNotePad\ExNotePad\bin\Debug\ExNotePad.exe
+C:\Users\Administrator\source\repos\ExNotePad\ExNotePad\bin\Debug\ExNotePad.pdb
+C:\Users\Administrator\source\repos\ExNotePad\ExNotePad\bin\Debug\hi\ExNotePad.resources.dll
+C:\Users\Administrator\source\repos\ExNotePad\ExNotePad\bin\Debug\ko-KR\ExNotePad.resources.dll
+C:\Users\Administrator\source\repos\ExNotePad\ExNotePad\obj\Debug\ExNotePad.Form1.resources
+C:\Users\Administrator\source\repos\ExNotePad\ExNotePad\obj\Debug\ExNotePad.Form1.hi.resources
+C:\Users\Administrator\source\repos\ExNotePad\ExNotePad\obj\Debug\ExNotePad.Form1.ko-KR.resources
+C:\Users\Administrator\source\repos\ExNotePad\ExNotePad\obj\Debug\hi\ExNotePad.resources.dll
+C:\Users\Administrator\source\repos\ExNotePad\ExNotePad\obj\Debug\ko-KR\ExNotePad.resources.dll
+C:\Users\Administrator\source\repos\ExNotePad\ExNotePad\obj\Debug\ExNotePad.exe
+C:\Users\Administrator\source\repos\ExNotePad\ExNotePad\obj\Debug\ExNotePad.pdb
