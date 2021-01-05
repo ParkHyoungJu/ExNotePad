@@ -74,21 +74,7 @@ namespace ExNotePad
                 }
                 else
                 {
-                    saveFileDialog = new SaveFileDialog();
-                    saveFileDialog.InitialDirectory = "c:\\";                            // 기본 저장 경로
-                    saveFileDialog.Title = "다른 이름으로 저장";                         // 창 타이틀
-                    saveFileDialog.Filter = "텍스트 문서(*.txt)|*.txt|모든 파일|*.*";    // 파일 형식
-                    saveFileDialog.DefaultExt = "txt";
-                    saveFileDialog.AddExtension = true;                                  // 확장명 추가 여부
-
-                    if (saveFileDialog.ShowDialog() == DialogResult.OK)
-                    {
-                        SaveFile(saveFileDialog.FileName);
-                    }
-                    else
-                    {
-                        result = false;
-                    }
+                    result = SaveDialog();
                 }
             }
 
@@ -308,6 +294,34 @@ namespace ExNotePad
         private void bodyTextBox_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
             ChangeBottomLineText();
+        }
+
+        private void otherNameSaveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveDialog();
+        }
+
+        private bool SaveDialog()
+        {
+            bool result = true;
+
+            saveFileDialog = new SaveFileDialog();
+            saveFileDialog.InitialDirectory = "c:\\";                            // 기본 저장 경로
+            saveFileDialog.Title = "다른 이름으로 저장";                         // 창 타이틀
+            saveFileDialog.Filter = "텍스트 문서(*.txt)|*.txt|모든 파일|*.*";    // 파일 형식
+            saveFileDialog.DefaultExt = "txt";
+            saveFileDialog.AddExtension = true;                                  // 확장명 추가 여부
+
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                SaveFile(saveFileDialog.FileName);
+            }
+            else
+            {
+                result = false;
+            }
+
+            return result;
         }
     }
 }

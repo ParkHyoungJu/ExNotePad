@@ -105,6 +105,7 @@
             // 
             this.otherNameSaveToolStripMenuItem.Name = "otherNameSaveToolStripMenuItem";
             resources.ApplyResources(this.otherNameSaveToolStripMenuItem, "otherNameSaveToolStripMenuItem");
+            this.otherNameSaveToolStripMenuItem.Click += new System.EventHandler(this.otherNameSaveToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
