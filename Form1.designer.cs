@@ -198,7 +198,11 @@
             resources.ApplyResources(this.bodyTextBox, "bodyTextBox");
             this.bodyTextBox.Name = "bodyTextBox";
             this.bodyTextBox.TextChanged += new System.EventHandler(this.BodyTextBox_TextChanged);
+            this.bodyTextBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.bodyTextBox_KeyUp);
+            this.bodyTextBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bodyTextBox_MouseDown);
             this.bodyTextBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.bodyTextBox_MouseMove);
+            this.bodyTextBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.bodyTextBox_MouseUp);
+            this.bodyTextBox.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.bodyTextBox_PreviewKeyDown);
             // 
             // Form1
             // 

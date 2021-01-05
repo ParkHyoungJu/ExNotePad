@@ -25,6 +25,8 @@ namespace ExNotePad
 
         private SaveFileDialog saveFileDialog;
 
+        private bool mouseDown = false;
+
         public Form1()
         {
             InitializeComponent();
@@ -34,6 +36,7 @@ namespace ExNotePad
         private void VisibleStatusToolStripMenuItem_CheckedChanged(Object sender, EventArgs e)
         {
             bottomLayoutPanel.Visible = visibleStatusToolStripMenuItem.Checked;
+            ChangeBottomLineText();
         }
 
         private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -44,6 +47,7 @@ namespace ExNotePad
         private void BodyTextBox_TextChanged(object sender, EventArgs e)
         {
             ChangeTitle();
+            ChangeBottomLineText();
         }
 
         private void ChangeTitle()
@@ -264,21 +268,46 @@ namespace ExNotePad
 
         private void ChangeBottomLineText()
         {
-            int line = bodyTextBox.GetLineFromCharIndex(bodyTextBox.SelectionStart);
-            int column = bodyTextBox.SelectionStart - bodyTextBox.GetFirstCharIndexFromLine(line);
+            int line = bodyTextBox.GetLineFromCharIndex(bodyTextBox.SelectionStart) + 1;
+            int column = bodyTextBox.SelectionStart - bodyTextBox.GetFirstCharIndexOfCurrentLine() + 1;
 
             bottomTextBox1.Text = "Ln " + line + ", Col " + column;
-        }
-
-        private void bodyTextBox_MouseMove(object sender, MouseEventArgs e)
-        {
-            ChangeBottomLineText();
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             // e.Cancel, true = 종료 취소, false = 종료 (default : false)
             e.Cancel = CloseForm();
+        }
+
+        private void bodyTextBox_MouseDown(object sender, MouseEventArgs e)
+        {
+            ChangeBottomLineText();
+            mouseDown = true;
+        }
+
+        private void bodyTextBox_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mouseDown)
+            {
+                ChangeBottomLineText();
+            }
+        }
+
+        private void bodyTextBox_MouseUp(object sender, MouseEventArgs e)
+        {
+            ChangeBottomLineText();
+            mouseDown = false;
+        }
+
+        private void bodyTextBox_KeyUp(object sender, KeyEventArgs e)
+        {
+            ChangeBottomLineText();
+        }
+
+        private void bodyTextBox_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            ChangeBottomLineText();
         }
     }
 }
